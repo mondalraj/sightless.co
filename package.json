@@ -1,0 +1,24 @@
+{
+  "name": "sightless.co",
+  "version": "1.0.0",
+  "description": "We are Your Brand Design Service",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mondalraj/sightless.co.git"
+  },
+  "author": "Rajib Mondal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mondalraj/sightless.co/issues"
+  },
+  "homepage": "https://github.com/mondalraj/sightless.co#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.12.15"
+  }
+}
