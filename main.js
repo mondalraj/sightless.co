@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { title: 'Home' });
 });
 
 app.get('/about', (req, res) => {
