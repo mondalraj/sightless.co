@@ -1,0 +1,156 @@
+@import "../mixins/varfunctions";
+
+nav {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  min-width: 100%;
+  height: 4rem;
+  background-color: color(secondary);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    z-index: 10;
+    a {
+      color: color(primary);
+      font-size: size(fonttwo);
+    }
+  }
+  .navbar {
+    display: flex;
+    .nav-item {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: size(fontone);
+      color: color(primary);
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 2px 30px;
+      border: 2px solid color(primary);
+      border-radius: 5px;
+    }
+  }
+  .hamburger-menu {
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    visibility: hidden;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    .container {
+      height: 100%;
+      display: flex;
+      //   justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      span {
+        width: 30px;
+        height: 3px;
+        margin: 4px 10px;
+        background-color: color(primary);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .active {
+    .container > .span1 {
+      transform: rotate(45deg) translate(37%);
+    }
+    .container > .span2 {
+      visibility: hidden;
+    }
+    .container > .span3 {
+      transform: rotate(-45deg) translate(37%);
+    }
+  }
+}
+
+.mobile-menu {
+  visibility: hidden;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  min-width: 300px;
+  height: 100%;
+  background-color: color(accent);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .mobile-nav-item {
+    padding: 0 30px;
+    margin: 7% 0;
+    font-size: size(fontone);
+    color: color(primary);
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 2px 30px;
+    border: 2px solid color(primary);
+    border-radius: 5px;
+  }
+}
+
+.active {
+  visibility: visible;
+}
+
+@media all and (max-width: 860px) and (min-width: 460px) {
+  nav {
+    .navbar {
+      visibility: hidden;
+    }
+    .hamburger-menu {
+      visibility: visible;
+    }
+    .active {
+      .container > .span1 {
+        transform: rotate(45deg) translate(50%);
+      }
+      .container > .span3 {
+        transform: rotate(-45deg) translate(50%);
+      }
+    }
+  }
+}
+
+@media all and (max-width: 460px) and (min-width: 240px) {
+  nav {
+    height: 3rem;
+    .logo {
+      a {
+        font-size: size(fontone);
+      }
+    }
+    .navbar {
+      visibility: hidden;
+    }
+    .hamburger-menu {
+      visibility: visible;
+      .container {
+        span {
+          height: 2px;
+          margin: 3px 0;
+        }
+      }
+    }
+    .active > .container {
+      float: right;
+    }
+  }
+  .active {
+    width: 100%;
+  }
+}

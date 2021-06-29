@@ -3,6 +3,29 @@
   <%- include("./partials/head.ejs") %>
 
   <body>
-    <%- include("./partials/nav.ejs") %> <%- include("./partials/footer.ejs") %>
+    <header>
+      <%- include("./partials/nav.ejs") %>
+      <div class="container">
+        <div class="left-content">
+          <h1>We build your</h1>
+          <h1>BRAND</h1>
+          <h3>An agency specialized with strategic and creative thinking.</h3>
+          <button>Request Service</button>
+        </div>
+        <div class="right-content"></div>
+      </div>
+    </header>
+
+    <section id="testimonial"></section>
+
+    <section id="partners"></section>
+
+    <section id="features"></section>
+
+    <section id="plans"></section>
+
+    <%- include("./partials/footer.ejs") %>
+
+    <script src="./scripts/nav.js"></script>
   </body>
 </html>
