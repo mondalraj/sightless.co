@@ -1,6 +1,8 @@
 @import "./modules/nav";
 @import "./modules/header";
 
+@import "./modules/footer";
+
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +11,5 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }

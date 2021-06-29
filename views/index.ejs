@@ -3,17 +3,15 @@
   <%- include("./partials/head.ejs") %>
 
   <body>
+    <%- include("./partials/nav.ejs") %>
     <header>
-      <%- include("./partials/nav.ejs") %>
-      <div class="container">
-        <div class="left-content">
-          <h1>We build your</h1>
-          <h1>BRAND</h1>
-          <h3>An agency specialized with strategic and creative thinking.</h3>
-          <button>Request Service</button>
-        </div>
-        <div class="right-content"></div>
+      <div class="left-content">
+        <h1 class="hero-text">We build & design your</h1>
+        <h1 class="brand">BRAND</h1>
+        <h3 class="tagline">An agency specialized with <span>strategic</span> and <span>creative thinking</span>.</h3>
+        <a class="req-btn" href="/contact">Request Service</a>
       </div>
+      <div class="right-content"></div>
     </header>
 
     <section id="testimonial"></section>

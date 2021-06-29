@@ -1,0 +1,14 @@
+@import "../mixins/varfunctions";
+
+footer {
+  padding: 20px 5%;
+  background-color: color(accent);
+  color: color(secondary);
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      font-size: size(fontone);
+    }
+  }
+}
