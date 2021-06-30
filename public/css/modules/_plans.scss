@@ -1,0 +1,70 @@
+@import "../mixins/varfunctions";
+@import "../mixins/package";
+
+#plans {
+  margin: 40px 5%;
+  border-top: 5px solid rgb(148, 148, 148);
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    opacity: 0.7;
+    padding: 40px 0;
+  }
+  .container {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .plan {
+      height: 500px;
+      width: 33%;
+      border-radius: 5px;
+    }
+    .light {
+      .package {
+        @extend %package;
+      }
+      .details {
+        @extend %details;
+      }
+    }
+    .premium {
+      position: relative;
+      border-right: 1px solid rgb(99, 99, 99);
+      border-left: 1px solid rgb(99, 99, 99);
+      .package {
+        @extend %package;
+        background-color: rgb(231, 231, 231);
+        width: 101%;
+        height: 260px;
+        position: absolute;
+        top: -40px;
+        left: -0.5%;
+        box-shadow: 1px 4px 18px 0px rgba(40, 40, 40, 0.71);
+        div {
+          height: 40px;
+          background-color: rgb(44, 44, 44);
+          color: white;
+          text-align: center;
+          font-size: 1.1rem;
+          padding-top: 10px;
+          text-transform: uppercase;
+        }
+      }
+      .details {
+        @extend %details;
+        margin-top: 240px;
+      }
+    }
+    .elite {
+      .package {
+        @extend %package;
+      }
+      .details {
+        @extend %details;
+      }
+    }
+  }
+}
