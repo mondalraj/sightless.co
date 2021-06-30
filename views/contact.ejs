@@ -3,7 +3,42 @@
   <%- include("./partials/head.ejs") %>
 
   <body>
-    <%- include("./partials/nav.ejs") %> <%- include("./partials/footer.ejs") %>
+    <%- include("./partials/nav.ejs") %>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="req-service">
+          <div class="form">
+            <h1>Request Service</h1>
+            <form action="">
+              <input type="text" placeholder="*Enter your name" /><br />
+              <input type="email" placeholder="Enter email address"/><br />
+              <input type="tel" name="" id="" placeholder="*Enter phone number"/><br />
+              <div class="choose-plan">
+                *Choose Plan
+                <input type="radio" id="light" name="plans" value="Light" />
+                  <label for="light">Light</label>
+                 
+                <input type="radio" id="premium" name="plans" value="Premium" />  
+                <label for="premium">Premium</label>
+                 
+                <input type="radio" id="elite" name="plans" value="Elite" />
+                  <label for="elite">Elite</label><br />
+              </div>
+              
+              <textarea name="" id="" cols="40" rows="5" placeholder="Enter additional services"></textarea><br />
+              <div class="buttons">
+                <a href="/#plans">View Plans &gt;</a>
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+          <div class="connect"></div>
+        </div>
+      </div>
+    </section>
+
+    <%- include("./partials/footer.ejs") %>
     <script src="./scripts/nav.js"></script>
   </body>
 </html>

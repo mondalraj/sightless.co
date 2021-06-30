@@ -1,0 +1,88 @@
+@import "../mixins/varfunctions";
+
+.contact-section {
+  position: relative;
+  height: calc(100vh - 4rem);
+  .container {
+    position: relative;
+    width: 90%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+    .req-service {
+      position: relative;
+      height: 90%;
+      width: 80%;
+      margin: auto;
+      background-color: rgb(207, 207, 207);
+      border-radius: 10px;
+      padding: 3% 1%;
+      .connect {
+        position: absolute;
+        height: 100%;
+        width: 35%;
+        top: 0;
+        right: 0;
+        background-color: color(secondary);
+        border-radius: 10px;
+      }
+      .form {
+        height: 100%;
+        width: 63%;
+        h1 {
+          font-size: size(fonttwo);
+          text-align: center;
+          margin-top: -5px;
+          margin-bottom: 20px;
+        }
+        form {
+          input {
+            width: 80%;
+            font-size: 1.1rem;
+            padding: 2px 10px;
+            margin: 3% 10%;
+            border-radius: 5px;
+            border: 1px solid rgb(95, 95, 95);
+          }
+          .choose-plan {
+            margin-left: 10%;
+            font-size: 1.2rem;
+            input[type="radio"] {
+              width: 5%;
+              margin-right: -10px;
+              margin-left: 3%;
+              margin-bottom: 5%;
+              border-radius: 5px;
+            }
+          }
+
+          textarea {
+            width: 80%;
+            margin: 0 10%;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            padding: 2px 10px;
+
+          }
+          .buttons {
+            margin-top: 2%;
+            a {
+              color: rgb(68, 68, 68);
+              font-size: 1.1rem;
+              margin: 20px 10%;
+            }
+            input[type="submit"] {
+              width: 30%;
+              height: 2rem;
+              border-radius: 5px;
+              border: 1px solid black;
+              position: relative;
+              left: 15%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
