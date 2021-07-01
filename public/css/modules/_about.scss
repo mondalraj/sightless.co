@@ -1,0 +1,173 @@
+@import "../mixins/varfunctions";
+
+.about-header {
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(19, 19, 19, 0.7) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(../assets/aboutHeaderimg.jpg);
+  transform: rotateY(180deg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 5rem);
+  max-height: 1160px;
+  padding: 0 5%;
+
+  .header-text {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    h1 {
+      transform: rotateY(-180deg);
+      color: white;
+      font-size: 2.7rem;
+      letter-spacing: 1px;
+      text-align: left;
+      line-height: 60px;
+    }
+  }
+}
+
+.what {
+  width: 100vw;
+  max-width: 1780px;
+  height: 400px;
+  background-color: black;
+  display: flex;
+  .left {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(204, 204, 204);
+    padding: 30px 7%;
+  }
+  .right {
+    width: 50%;
+    height: 100%;
+    background-image: url(../../assets/rightimg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+
+    padding: 30px 7%;
+  }
+}
+
+.how {
+  width: 100vw;
+  max-width: 1780px;
+  height: 400px;
+  background-color: black;
+  display: flex;
+  .left {
+    width: 50%;
+    height: 100%;
+    background-image: url(../../assets/leftimg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+
+    padding: 30px 7%;
+  }
+  .right {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+
+    padding: 30px 7%;
+  }
+}
+
+.team {
+  width: 90vw;
+  max-width: 1780px;
+  height: 200px;
+  border-top: 5px solid rgb(128, 128, 128);
+  margin: 20px auto;
+  padding: 40px;
+  color: rgb(53, 53, 53);
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  h4 {
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+  }
+}
+
+.members {
+  width: 90vw;
+  max-width: 1780px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+
+  .member {
+    margin: 5px;
+    padding: 0 20px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 10px;
+    .pic {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      background-color: rgb(78, 78, 78);
+      margin: 20px auto;
+
+      background-image: url("../assets/kartikpic.jpeg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .name {
+      font-size: 1.8rem;
+      margin: 10px 0 30px 0;
+    }
+    .saying {
+      .quote-left {
+        float: left;
+      }
+      .quote-right {
+        float: right;
+        width: 30px;
+      }
+    }
+    p {
+      padding-top: 40px;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+    }
+  }
+
+  .rajib {
+    border-right: 1px solid rgb(167, 167, 167);
+    border-left: 1px solid rgb(167, 167, 167);
+    .pic {
+      background-image: url("../assets/rajibpic.jpeg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .abhishek {
+    .pic {
+      background-image: url("../assets/abhishekpic.jpeg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
