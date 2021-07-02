@@ -1,4 +1,5 @@
 const express = require('express');
+const testimonials = require('./testimonials');
 
 const app = express();
 app.listen(3000);
@@ -8,7 +9,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home'});
+    res.render('index', { title: 'Home', testimonials: testimonials });
 });
 
 app.get('/about', (req, res) => {
